@@ -25,7 +25,7 @@ func _input(event: InputEvent) -> void:
 			SignalBus.increase_minigame_score.emit(GameManager.POINT_TYPE.HALF_POINT)
 			normal_particles.emitting = true
 		elif in_perfect_area and in_ok_area:
-			perfect_particles.emitting = true
+			#perfect_particles.emitting = true
 			SignalBus.increase_minigame_score.emit(GameManager.POINT_TYPE.FULL_POINT)
 
 func _on_target_area_normal_area_entered(area: Area2D) -> void:
