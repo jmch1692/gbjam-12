@@ -143,7 +143,7 @@ position = Vector2(37.9, 89.7)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_jgldq")
 animation = &"Idle"
-frame_progress = 0.872283
+frame_progress = 0.398975
 speed_scale = 0.75
 
 [node name="Path2D" type="Path2D" parent="CanvasLayer"]

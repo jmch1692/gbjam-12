@@ -25,6 +25,8 @@ GameManager="*res://autoloads/GameManager.gd"
 window/size/viewport_width=160
 window/size/viewport_height=144
 window/size/resizable=false
+window/size/window_width_override=980
+window/size/window_height_override=760
 window/stretch/mode="canvas_items"
 
 [editor_plugins]
