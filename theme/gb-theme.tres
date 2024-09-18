@@ -1,0 +1,65 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://c78kjgp3n555s"]
+
+[ext_resource type="FontFile" uid="uid://b4ny32yq5pwu0" path="res://font/monogram.ttf" id="1_i7yaf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x234m"]
+bg_color = Color(0.247059, 0.427451, 0.619608, 1)
+border_color = Color(0.901961, 0.94902, 0.937255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lj55y"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.247059, 0.427451, 0.619608, 1)
+border_color = Color(0.901961, 0.94902, 0.937255, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ml4c1"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.0823529, 0.0862745, 0.25098, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqmef"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.247059, 0.427451, 0.619608, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[resource]
+Button/colors/font_color = Color(0.901961, 0.94902, 0.937255, 1)
+Button/colors/font_focus_color = Color(0.968627, 0.513726, 0.690196, 1)
+Button/colors/font_hover_color = Color(0.968627, 0.513726, 0.690196, 1)
+Button/colors/font_outline_color = Color(0.968627, 0.513726, 0.690196, 1)
+Button/colors/font_pressed_color = Color(0.901961, 0.94902, 0.937255, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_i7yaf")
+Button/styles/focus = SubResource("StyleBoxFlat_x234m")
+Button/styles/hover = SubResource("StyleBoxFlat_lj55y")
+Button/styles/normal = SubResource("StyleBoxFlat_ml4c1")
+Button/styles/pressed = SubResource("StyleBoxFlat_iqmef")
+Label/colors/font_color = Color(0.901961, 0.94902, 0.937255, 1)
+Label/fonts/font = ExtResource("1_i7yaf")
+RichTextLabel/colors/default_color = Color(0.0823529, 0.0862745, 0.25098, 1)
+RichTextLabel/fonts/normal_font = null

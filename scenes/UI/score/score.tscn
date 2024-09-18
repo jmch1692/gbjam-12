@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://blixdwx33s4yu"]
+
+[ext_resource type="Script" path="res://scenes/UI/score/label.gd" id="1_67xyh"]
+[ext_resource type="Theme" uid="uid://c78kjgp3n555s" path="res://theme/gb-theme.tres" id="1_qwrhx"]
+
+[node name="Score" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+pivot_offset = Vector2(3, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 2.0
+offset_right = 42.0
+offset_bottom = 23.0
+theme = ExtResource("1_qwrhx")
+text = "0"
+script = ExtResource("1_67xyh")

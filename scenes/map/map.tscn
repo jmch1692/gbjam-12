@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://byivdlw1chiu5"]
+
+[ext_resource type="PackedScene" uid="uid://bpn8vg1yo17ox" path="res://scenes/player/player.tscn" id="2_4a0ji"]
+[ext_resource type="PackedScene" uid="uid://435013cit8qr" path="res://scenes/kid/kid_spawner.tscn" id="3_msupu"]
+[ext_resource type="PackedScene" uid="uid://blixdwx33s4yu" path="res://scenes/UI/score/score.tscn" id="3_qymmv"]
+
+[node name="Map" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("2_4a0ji")]
+position = Vector2(194, 71)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(1, 1)
+position_smoothing_speed = 10.0
+
+[node name="Score" parent="." instance=ExtResource("3_qymmv")]
+
+[node name="KidSpawner2" parent="." node_paths=PackedStringArray("spawn_area_quadrants") instance=ExtResource("3_msupu")]
+position = Vector2(340, 99)
+spawn_area_quadrants = [NodePath("Quadrant_1"), NodePath("Quadrant_2"), NodePath("Quadrant_3"), NodePath("Quadrant_4"), NodePath("Quadrant_5")]
+costumes = Array[int]([0, 1, 2])
+
+[node name="KidSpawner" parent="." node_paths=PackedStringArray("spawn_area_quadrants") instance=ExtResource("3_msupu")]
+position = Vector2(56, 98)
+spawn_area_quadrants = [NodePath("Quadrant_1"), NodePath("Quadrant_2"), NodePath("Quadrant_3"), NodePath("Quadrant_4"), NodePath("Quadrant_5")]
+costumes = Array[int]([0, 1, 2])
+
+[editable path="KidSpawner2"]
+[editable path="KidSpawner"]

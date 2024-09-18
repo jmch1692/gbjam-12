@@ -1,0 +1,183 @@
+[gd_scene load_steps=17 format=3 uid="uid://dyitfsyes3tf1"]
+
+[ext_resource type="Script" path="res://scenes/minigames/hit-on-point/hit_and_point.gd" id="1_cbqai"]
+[ext_resource type="Texture2D" uid="uid://be46kgvkncqr3" path="res://art/blue_button03.png" id="2_mp352"]
+[ext_resource type="Texture2D" uid="uid://dfuvl5il3ncen" path="res://art/blue_button12.png" id="3_u2m8t"]
+[ext_resource type="Texture2D" uid="uid://bttynrkednx5o" path="res://art/particles/2.png" id="4_na0ny"]
+[ext_resource type="Texture2D" uid="uid://dk3vujsw7fjyd" path="res://art/blue_sliderUp.png" id="4_pfkxh"]
+[ext_resource type="Texture2D" uid="uid://fi3qfakb4gtr" path="res://art/Ghosty/ghosty-idle.png" id="4_v2lwo"]
+[ext_resource type="Script" path="res://scenes/minigames/hit-on-point/point.gd" id="5_jwv80"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vee6a"]
+size = Vector2(44.6582, 40.4494)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3o7ct"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+initial_velocity_max = 311.83
+gravity = Vector3(0, -100, 0)
+turbulence_noise_strength = 10.25
+turbulence_noise_scale = 8.95
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnvwx"]
+size = Vector2(12.405, 44.4944)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f711j"]
+atlas = ExtResource("4_v2lwo")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mayec"]
+atlas = ExtResource("4_v2lwo")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqdpr"]
+atlas = ExtResource("4_v2lwo")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jgldq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f711j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mayec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqdpr")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Curve2D" id="Curve2D_v350s"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -60, -49, 0, 0, 0, 0, 60, -49, 0, 0, 0, 0, -60, -49)
+}
+point_count = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlnvj"]
+size = Vector2(9.65, 34.5882)
+
+[node name="Hit-and-point" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_cbqai")
+min_score_baseline = 15
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+self_modulate = Color(0.0823529, 0.0862745, 0.25098, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bar" type="Sprite2D" parent="CanvasLayer/Background"]
+position = Vector2(78, 23)
+scale = Vector2(0.647368, 0.233333)
+texture = ExtResource("2_mp352")
+
+[node name="Target" type="Sprite2D" parent="CanvasLayer/Background"]
+position = Vector2(76, 23)
+scale = Vector2(0.510204, 0.491667)
+texture = ExtResource("3_u2m8t")
+metadata/_edit_group_ = true
+
+[node name="TargetAreaNormal" type="Area2D" parent="CanvasLayer/Background/Target"]
+collision_layer = 8
+collision_mask = 8
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Background/Target/TargetAreaNormal"]
+position = Vector2(4.57764e-05, 0)
+shape = SubResource("RectangleShape2D_vee6a")
+debug_color = Color(0.496567, 0.581912, 0.0483412, 0.42)
+
+[node name="NormalParticles" type="GPUParticles2D" parent="CanvasLayer/Background/Target/TargetAreaNormal"]
+unique_name_in_owner = true
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_3o7ct")
+texture = ExtResource("4_na0ny")
+lifetime = 0.7
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+interp_to_end = 1.0
+
+[node name="TargetAreaPerfect" type="Area2D" parent="CanvasLayer/Background/Target"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Background/Target/TargetAreaPerfect"]
+position = Vector2(1.24051, 3.8147e-06)
+shape = SubResource("RectangleShape2D_gnvwx")
+debug_color = Color(0.891414, 0.261776, 0.49239, 0.42)
+
+[node name="PerfectParticles" type="GPUParticles2D" parent="CanvasLayer/Background/Target/TargetAreaPerfect"]
+unique_name_in_owner = true
+emitting = false
+amount = 16
+process_material = SubResource("ParticleProcessMaterial_3o7ct")
+texture = ExtResource("4_na0ny")
+lifetime = 0.7
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+interp_to_end = 1.0
+
+[node name="PlayerAvatar" type="AnimatedSprite2D" parent="CanvasLayer/Background"]
+unique_name_in_owner = true
+position = Vector2(37.9, 89.7)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_jgldq")
+animation = &"Idle"
+frame_progress = 0.292898
+speed_scale = 0.75
+
+[node name="Path2D" type="Path2D" parent="CanvasLayer"]
+position = Vector2(80, 72)
+curve = SubResource("Curve2D_v350s")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="CanvasLayer/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-60, -49)
+rotates = false
+cubic_interp = false
+
+[node name="Point" type="Sprite2D" parent="CanvasLayer/Path2D/PathFollow2D"]
+position = Vector2(2, 9)
+scale = Vector2(0.535714, 0.404762)
+texture = ExtResource("4_pfkxh")
+script = ExtResource("5_jwv80")
+metadata/_edit_group_ = true
+
+[node name="PointerArea" type="Area2D" parent="CanvasLayer/Path2D/PathFollow2D/Point"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Path2D/PathFollow2D/Point/PointerArea"]
+position = Vector2(0, -1.14441e-05)
+shape = SubResource("RectangleShape2D_jlnvj")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 5.0
+one_shot = true
+
+[connection signal="area_entered" from="CanvasLayer/Background/Target/TargetAreaNormal" to="CanvasLayer/Path2D/PathFollow2D/Point" method="_on_target_area_normal_area_entered"]
+[connection signal="area_exited" from="CanvasLayer/Background/Target/TargetAreaNormal" to="CanvasLayer/Path2D/PathFollow2D/Point" method="_on_target_area_normal_area_exited"]
+[connection signal="area_entered" from="CanvasLayer/Background/Target/TargetAreaPerfect" to="CanvasLayer/Path2D/PathFollow2D/Point" method="_on_target_area_perfect_area_entered"]
+[connection signal="area_exited" from="CanvasLayer/Background/Target/TargetAreaPerfect" to="CanvasLayer/Path2D/PathFollow2D/Point" method="_on_target_area_perfect_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

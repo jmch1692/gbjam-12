@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://435013cit8qr"]
+
+[ext_resource type="Script" path="res://scenes/kid/kid_spawner.gd" id="1_2noj8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u23ss"]
+size = Vector2(40, 40)
+
+[node name="KidSpawner" type="Area2D"]
+collision_layer = 16
+collision_mask = 0
+monitoring = false
+monitorable = false
+script = ExtResource("1_2noj8")
+
+[node name="Quadrant_1" type="CollisionShape2D" parent="."]
+position = Vector2(-37, -35)
+shape = SubResource("RectangleShape2D_u23ss")
+debug_color = Color(0.607801, 0.526655, 0.340411, 0.42)
+
+[node name="Quadrant_2" type="CollisionShape2D" parent="."]
+position = Vector2(40, -34)
+shape = SubResource("RectangleShape2D_u23ss")
+debug_color = Color(0.607801, 0.526655, 0.340411, 0.42)
+
+[node name="Quadrant_3" type="CollisionShape2D" parent="."]
+position = Vector2(-35, 35)
+shape = SubResource("RectangleShape2D_u23ss")
+debug_color = Color(0.607801, 0.526655, 0.340411, 0.42)
+
+[node name="Quadrant_4" type="CollisionShape2D" parent="."]
+position = Vector2(36, 35)
+shape = SubResource("RectangleShape2D_u23ss")
+debug_color = Color(0.607801, 0.526655, 0.340411, 0.42)
+
+[node name="Quadrant_5" type="CollisionShape2D" parent="."]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_u23ss")
+debug_color = Color(0.607801, 0.526655, 0.340411, 0.42)

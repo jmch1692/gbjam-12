@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2wwu2texg5bx"]
+
+[ext_resource type="Script" path="res://scenes/UI/speech-bubble/speech_bubble.gd" id="1_rhrr3"]
+[ext_resource type="Theme" uid="uid://c78kjgp3n555s" path="res://theme/gb-theme.tres" id="2_058ln"]
+[ext_resource type="FontFile" uid="uid://bnwg6pb67qncg" path="res://font/pixelFJ8pt1__.TTF" id="3_pmkyb"]
+
+[node name="SpeechBubble" type="Control"]
+z_index = 5
+layout_mode = 3
+anchors_preset = 0
+pivot_offset = Vector2(0, 23)
+theme = ExtResource("2_058ln")
+script = ExtResource("1_rhrr3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 45.0
+offset_bottom = 14.0
+pivot_offset = Vector2(0, 24)
+color = Color(0.901961, 0.94902, 0.937255, 1)
+
+[node name="DialogueText" type="RichTextLabel" parent="ColorRect"]
+texture_filter = 5
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.406
+anchor_bottom = 0.284
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 32.73
+offset_bottom = 20.024
+pivot_offset = Vector2(-2, 24)
+theme_override_colors/default_color = Color(0.0823529, 0.0862745, 0.25098, 1)
+theme_override_colors/font_outline_color = Color(0.901961, 0.94902, 0.937255, 1)
+theme_override_colors/font_shadow_color = Color(0.901961, 0.94902, 0.937255, 1)
+theme_override_fonts/normal_font = ExtResource("3_pmkyb")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+meta_underlined = false
+hint_underlined = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 6.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
