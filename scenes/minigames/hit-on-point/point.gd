@@ -12,6 +12,7 @@ var in_ok_area : bool = false
 
 func _ready():
 	if GameManager.difficulty != 0:
+		SignalBus.broadcast_set_difficulty.emit(GameManager.difficulty)
 		pointer_speed = speed_baseline * GameManager.difficulty
 	else:
 		pointer_speed = speed_baseline
@@ -25,8 +26,10 @@ func _input(event: InputEvent) -> void:
 			SignalBus.increase_minigame_score.emit(GameManager.POINT_TYPE.HALF_POINT)
 			normal_particles.emitting = true
 		elif in_perfect_area and in_ok_area:
-			#perfect_particles.emitting = true
+			perfect_particles.emitting = true
 			SignalBus.increase_minigame_score.emit(GameManager.POINT_TYPE.FULL_POINT)
+		else:
+			SignalBus.fail_hit.emit()
 
 func _on_target_area_normal_area_entered(area: Area2D) -> void:
 	if area.name == "PointerArea":

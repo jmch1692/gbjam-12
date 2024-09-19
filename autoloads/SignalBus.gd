@@ -14,6 +14,8 @@ signal set_new_score(score: int)
 signal increase_minigame_score(point_type: GameManager.POINT_TYPE)
 signal minigame_ended()
 signal minigame_outcome(obtained_good_score: bool)
+signal fail_hit()
+signal broadcast_set_difficulty(difficulty: int)
 #endregion
 
 #region Kid Spawner signals

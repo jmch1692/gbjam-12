@@ -4,6 +4,7 @@ extends StateMachineState
 # Called when the state machine enters this state.
 func on_enter() -> void:
 	SignalBus.minigame_ended.connect(_on_minigame_ended)
+	state_machine.animation_player.play("Idle")
 
 func _on_minigame_ended():
 	state_machine.change_state("Idle")

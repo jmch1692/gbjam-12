@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfuvl5il3ncen"
-path="res://.godot/imported/blue_button12.png-6917f351af759fdf9f737abb58c4ae70.ctex"
+uid="uid://ym0oc3cjcdnj"
+path="res://.godot/imported/skelekid-spritesheet-Sheet.png-7f4bca0c6488d069dba418d3157d2f27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/blue_button12.png"
-dest_files=["res://.godot/imported/blue_button12.png-6917f351af759fdf9f737abb58c4ae70.ctex"]
+source_file="res://art/Kids/skelekid-spritesheet-Sheet.png"
+dest_files=["res://.godot/imported/skelekid-spritesheet-Sheet.png-7f4bca0c6488d069dba418d3157d2f27.ctex"]
 
 [params]
 

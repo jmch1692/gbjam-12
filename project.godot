@@ -27,7 +27,7 @@ window/size/viewport_height=144
 window/size/resizable=false
 window/size/window_width_override=980
 window/size/window_height_override=760
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
@@ -96,6 +96,7 @@ b={
 2d_physics/layer_3="terrain"
 2d_physics/layer_4="misc"
 2d_physics/layer_5="spawner"
+2d_physics/layer_6="boundary"
 
 [rendering]
 

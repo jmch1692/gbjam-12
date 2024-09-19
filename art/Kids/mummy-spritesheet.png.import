@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7bneswffmmec"
-path="res://.godot/imported/Skelekid-idle.png-85d806320110a6577c15d18a43e8ccf6.ctex"
+uid="uid://dd6rgr35lvute"
+path="res://.godot/imported/mummy-spritesheet.png-31efeb337e141fd56d9dd3becb047644.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kids/Skelekid-idle.png"
-dest_files=["res://.godot/imported/Skelekid-idle.png-85d806320110a6577c15d18a43e8ccf6.ctex"]
+source_file="res://art/Kids/mummy-spritesheet.png"
+dest_files=["res://.godot/imported/mummy-spritesheet.png-31efeb337e141fd56d9dd3becb047644.ctex"]
 
 [params]
 

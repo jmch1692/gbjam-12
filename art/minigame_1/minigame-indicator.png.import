@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be46kgvkncqr3"
-path="res://.godot/imported/blue_button03.png-060b2f5819370bcc748ab94212f42dd9.ctex"
+uid="uid://clof1riqp40qu"
+path="res://.godot/imported/minigame-indicator.png-12876c443a83aae8f88f9d312a54db8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/blue_button03.png"
-dest_files=["res://.godot/imported/blue_button03.png-060b2f5819370bcc748ab94212f42dd9.ctex"]
+source_file="res://art/minigame_1/minigame-indicator.png"
+dest_files=["res://.godot/imported/minigame-indicator.png-12876c443a83aae8f88f9d312a54db8b.ctex"]
 
 [params]
 

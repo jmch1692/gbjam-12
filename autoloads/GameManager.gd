@@ -21,6 +21,7 @@ var scoring_map : Dictionary = {
 var difficulty : int
 var kids_and_areas : Dictionary
 var randomizer : RandomNumberGenerator = RandomNumberGenerator.new()
+var minigame_cooldown : bool = false
 
 var score : int = 0 :
 	set(value):
@@ -30,8 +31,8 @@ var score : int = 0 :
 		return score
 		
 func _on_start_game():
-	var map = map.instantiate()
-	add_sibling(map)
+	var map_nstance = map.instantiate()
+	add_sibling(map_nstance)
 
 func _ready():
 	randomizer.randomize()
@@ -49,17 +50,20 @@ func _on_minigame_outcome(won: bool):
 			kids_and_areas.erase(player.closest_area)
 			closest_area.queue_free()
 			player.closest_area = null
+		else:
+			minigame_cooldown = true
 
 func get_number_of_kids_in_area(area : Area2D) -> int:
 	var kids = kids_and_areas[area]
 	return kids.size()
 	
 func _on_start_minigame(number_of_kids : int):
-	difficulty = (1 + difficulty_scaling_speed) * number_of_kids
-	var root_node = get_tree().root
-	var minigame = minigame_hit_point.instantiate()
-	minigame.number_of_kids = number_of_kids
-	root_node.add_child(minigame)
+	if minigame_cooldown == false:
+		difficulty = (1 + difficulty_scaling_speed) * number_of_kids
+		var root_node = get_tree().root
+		var minigame = minigame_hit_point.instantiate()
+		minigame.number_of_kids = number_of_kids
+		root_node.add_child(minigame)
 
 func _on_report_kids_in_area(area: Area2D, kids: Array[Kid]):
 	kids_and_areas[area] = kids

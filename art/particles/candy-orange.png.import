@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bttynrkednx5o"
-path="res://.godot/imported/2.png-6327f507a070adde9d05177d94e8e419.ctex"
+uid="uid://bg728tueoylh6"
+path="res://.godot/imported/candy-orange.png-df94b287caa1638f6680e38e5a3e3b40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/particles/2.png"
-dest_files=["res://.godot/imported/2.png-6327f507a070adde9d05177d94e8e419.ctex"]
+source_file="res://art/particles/candy-orange.png"
+dest_files=["res://.godot/imported/candy-orange.png-df94b287caa1638f6680e38e5a3e3b40.ctex"]
 
 [params]
 

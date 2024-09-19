@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cder48ltdkm7s"
-path="res://.godot/imported/ghosty-move.png-3a099d94f4d7527bf1c3a06767d7401c.ctex"
+uid="uid://c6708vm3t8ayc"
+path="res://.godot/imported/ghost-kid-spritesheet.png-7d570e4771dde990b39a63e4c133e1ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Ghosty/ghosty-move.png"
-dest_files=["res://.godot/imported/ghosty-move.png-3a099d94f4d7527bf1c3a06767d7401c.ctex"]
+source_file="res://art/Kids/ghost-kid-spritesheet.png"
+dest_files=["res://.godot/imported/ghost-kid-spritesheet.png-7d570e4771dde990b39a63e4c133e1ad.ctex"]
 
 [params]
 

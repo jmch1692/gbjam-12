@@ -14,8 +14,6 @@ script = ExtResource("1_rhrr3")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 45.0
-offset_bottom = 14.0
 pivot_offset = Vector2(0, 24)
 color = Color(0.901961, 0.94902, 0.937255, 1)
 
@@ -27,8 +25,8 @@ anchor_right = 0.406
 anchor_bottom = 0.284
 offset_left = 3.0
 offset_top = 2.0
-offset_right = 32.73
-offset_bottom = 20.024
+offset_right = 38.73
+offset_bottom = 17.184
 pivot_offset = Vector2(-2, 24)
 theme_override_colors/default_color = Color(0.0823529, 0.0862745, 0.25098, 1)
 theme_override_colors/font_outline_color = Color(0.901961, 0.94902, 0.937255, 1)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk3vujsw7fjyd"
-path="res://.godot/imported/blue_sliderUp.png-c782eb4eedc7f8e0b3f10e9f09cbf1aa.ctex"
+uid="uid://dme3ridhqxj24"
+path="res://.godot/imported/minigame-bar.png-a1065306c8e4bedf0053a9acbfcf6689.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/blue_sliderUp.png"
-dest_files=["res://.godot/imported/blue_sliderUp.png-c782eb4eedc7f8e0b3f10e9f09cbf1aa.ctex"]
+source_file="res://art/minigame_1/minigame-bar.png"
+dest_files=["res://.godot/imported/minigame-bar.png-a1065306c8e4bedf0053a9acbfcf6689.ctex"]
 
 [params]
 

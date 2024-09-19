@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqi3xp7tapww2"
-path="res://.godot/imported/Witch-Idle.png-852b00e78089717ea1414ee3835c3a32.ctex"
+uid="uid://3qem2xhxqyni"
+path="res://.godot/imported/sky.png-97b224413c1acc71756eb5cda10a470e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kids/Witch-Idle.png"
-dest_files=["res://.godot/imported/Witch-Idle.png-852b00e78089717ea1414ee3835c3a32.ctex"]
+source_file="res://art/tilemap/sky.png"
+dest_files=["res://.godot/imported/sky.png-97b224413c1acc71756eb5cda10a470e.ctex"]
 
 [params]
 

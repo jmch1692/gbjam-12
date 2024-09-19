@@ -134,8 +134,14 @@ unique_name_in_owner = true
 visible = false
 top_level = true
 layout_mode = 1
+anchors_preset = -1
+anchor_left = -8.9125
+anchor_top = -5.81944
+anchor_right = -8.9125
+anchor_bottom = -5.81944
 offset_right = 1280.0
 offset_bottom = 980.0
+scale = Vector2(10, 10)
 color = Color(0.0823529, 0.0862745, 0.25098, 1)
 metadata/_edit_use_anchors_ = true
 
