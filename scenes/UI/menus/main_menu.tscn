@@ -72,9 +72,9 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -36.0
-offset_right = 36.0
-offset_bottom = 40.0
+offset_left = -42.0
+offset_right = 42.0
+offset_bottom = 123.0
 grow_horizontal = 2
 
 [node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
@@ -82,9 +82,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 theme_override_font_sizes/font_size = 28
-text = "Project Name"
-horizontal_alignment = 1
-vertical_alignment = 1
+text = "Boo Who?"
 
 [node name="ButtonsContainer" type="VBoxContainer" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
@@ -148,23 +146,24 @@ metadata/_edit_use_anchors_ = true
 [node name="Credits" parent="." instance=ExtResource("3_jghf0")]
 visible = false
 layout_mode = 1
-text = "		Game Design
-		jmch16.itch.io
-		pixelunicorn29.itch.io
+text = "	Game Design
+	jmch16.itch.io
+	pixelunicorn29.itch.io
 		
-		Programming
-		jmch16.itch.io
+	Programming
+	jmch16.itch.io
 
-		Art
-		pixelunicorn29.itch.io"
+	Art
+	pixelunicorn29.itch.io"
 title = "Credits"
 
 [node name="Controls" parent="." instance=ExtResource("3_jghf0")]
 visible = false
 layout_mode = 1
 text = "- Press 'A' to spook kids
-- Press 'B' to consume stolen candy, and increase your spookiness
-- Move around the neighborhood with the arrow keys"
+- Play minigames to earn candy
+- Move around the neighborhood with the arrow keys
+- Spook all kids to win"
 title = "How to play"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

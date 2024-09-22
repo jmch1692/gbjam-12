@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dyitfsyes3tf1"]
+[gd_scene load_steps=34 format=3 uid="uid://dyitfsyes3tf1"]
 
 [ext_resource type="Script" path="res://scenes/minigames/hit-on-point/hit_and_point.gd" id="1_cbqai"]
 [ext_resource type="Texture2D" uid="uid://dme3ridhqxj24" path="res://art/minigame_1/minigame-bar.png" id="2_iw632"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://scenes/minigames/hit-on-point/point.gd" id="5_jwv80"]
 [ext_resource type="PackedScene" uid="uid://caayud880f1yk" path="res://scenes/UI/spookometer/spookometer.tscn" id="6_jp7rm"]
 [ext_resource type="Texture2D" uid="uid://b2skrx7f0d1x2" path="res://art/minigame_1/minigame-avatar.png" id="6_pepe0"]
-[ext_resource type="Texture2D" uid="uid://clof1riqp40qu" path="res://art/minigame_1/minigame-indicator.png" id="7_w53oy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qs7va"]
 atlas = ExtResource("3_quqot")
@@ -68,8 +67,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bc8bd"]
-radius = 15.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_afwbb"]
+size = Vector2(13, 21)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3o7ct"]
 particle_flag_disable_z = true
@@ -83,7 +82,7 @@ turbulence_noise_strength = 10.25
 turbulence_noise_scale = 8.95
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gnvwx"]
-size = Vector2(10.962, 30)
+size = Vector2(3.5, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_voyvw"]
 atlas = ExtResource("6_pepe0")
@@ -232,8 +231,23 @@ _data = {
 }
 point_count = 3
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_f22uq"]
+atlas = ExtResource("3_quqot")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5oapx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f22uq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jlnvj"]
-size = Vector2(6, 24)
+size = Vector2(2, 24)
 
 [node name="Hit-and-point" type="Control"]
 layout_mode = 3
@@ -252,6 +266,7 @@ min_score_baseline = 15
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Background" type="ColorRect" parent="CanvasLayer"]
+unique_name_in_owner = true
 self_modulate = Color(0.0823529, 0.0862745, 0.25098, 1)
 anchors_preset = 15
 anchor_right = 1.0
@@ -269,16 +284,16 @@ position = Vector2(76, 20)
 rotation = -0.0174533
 sprite_frames = SubResource("SpriteFrames_ol4br")
 animation = &"fail"
-metadata/_edit_group_ = true
 
 [node name="TargetAreaNormal" type="Area2D" parent="CanvasLayer/Background/Target"]
+position = Vector2(1, -1)
 collision_layer = 8
 collision_mask = 8
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Background/Target/TargetAreaNormal"]
-position = Vector2(0, 2)
-shape = SubResource("CircleShape2D_bc8bd")
+position = Vector2(-1.5, 2.5)
+shape = SubResource("RectangleShape2D_afwbb")
 debug_color = Color(0.496567, 0.581912, 0.0483412, 0.42)
 
 [node name="NormalParticles" type="GPUParticles2D" parent="CanvasLayer/Background/Target/TargetAreaNormal"]
@@ -287,7 +302,7 @@ emitting = false
 amount = 4
 process_material = SubResource("ParticleProcessMaterial_3o7ct")
 texture = ExtResource("4_b2bsp")
-lifetime = 0.7
+lifetime = 0.3
 one_shot = true
 explosiveness = 1.0
 randomness = 1.0
@@ -297,17 +312,17 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Background/Target/TargetAreaPerfect"]
-position = Vector2(0.519005, 2)
+position = Vector2(-0.25, 2)
 shape = SubResource("RectangleShape2D_gnvwx")
 debug_color = Color(0.891414, 0.261776, 0.49239, 0.42)
 
 [node name="PerfectParticles" type="GPUParticles2D" parent="CanvasLayer/Background/Target/TargetAreaPerfect"]
 unique_name_in_owner = true
 emitting = false
-amount = 10
+amount = 12
 process_material = SubResource("ParticleProcessMaterial_3o7ct")
 texture = ExtResource("4_b2bsp")
-lifetime = 0.7
+lifetime = 0.4
 one_shot = true
 explosiveness = 1.0
 randomness = 1.0
@@ -315,7 +330,7 @@ interp_to_end = 1.0
 
 [node name="PlayerAvatar" type="AnimatedSprite2D" parent="CanvasLayer/Background"]
 unique_name_in_owner = true
-position = Vector2(37.9, 89.7)
+position = Vector2(38, 90)
 sprite_frames = SubResource("SpriteFrames_mvnji")
 animation = &"happy"
 frame = 2
@@ -329,11 +344,12 @@ libraries = {
 }
 
 [node name="Spookometer" parent="CanvasLayer/Background" instance=ExtResource("6_jp7rm")]
+unique_name_in_owner = true
 layout_mode = 1
-offset_left = 131.0
-offset_top = 87.0
-offset_right = 131.0
-offset_bottom = 87.0
+offset_left = 115.0
+offset_top = 50.0
+offset_right = 115.0
+offset_bottom = 50.0
 
 [node name="Path2D" type="Path2D" parent="CanvasLayer"]
 position = Vector2(80, 72)
@@ -345,9 +361,9 @@ position = Vector2(-60, -49)
 rotates = false
 cubic_interp = false
 
-[node name="Point" type="Sprite2D" parent="CanvasLayer/Path2D/PathFollow2D"]
-position = Vector2(0, 7)
-texture = ExtResource("7_w53oy")
+[node name="Point" type="AnimatedSprite2D" parent="CanvasLayer/Path2D/PathFollow2D"]
+position = Vector2(-1, -2)
+sprite_frames = SubResource("SpriteFrames_5oapx")
 script = ExtResource("5_jwv80")
 
 [node name="PointerArea" type="Area2D" parent="CanvasLayer/Path2D/PathFollow2D/Point"]
@@ -355,12 +371,11 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Path2D/PathFollow2D/Point/PointerArea"]
-position = Vector2(0, -5)
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_jlnvj")
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 5.0
 one_shot = true
 
 [connection signal="area_entered" from="CanvasLayer/Background/Target/TargetAreaNormal" to="CanvasLayer/Path2D/PathFollow2D/Point" method="_on_target_area_normal_area_entered"]

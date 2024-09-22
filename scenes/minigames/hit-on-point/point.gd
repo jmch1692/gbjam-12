@@ -1,4 +1,4 @@
-extends Sprite2D
+extends AnimatedSprite2D
 
 @onready var _follow : PathFollow2D = %PathFollow2D
 @onready var normal_particles : GPUParticles2D = %NormalParticles
@@ -12,7 +12,6 @@ var in_ok_area : bool = false
 
 func _ready():
 	if GameManager.difficulty != 0:
-		SignalBus.broadcast_set_difficulty.emit(GameManager.difficulty)
 		pointer_speed = speed_baseline * GameManager.difficulty
 	else:
 		pointer_speed = speed_baseline

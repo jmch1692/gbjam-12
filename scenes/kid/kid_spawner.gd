@@ -13,10 +13,10 @@ func _pick_quadrant_position(quadrants : Array[CollisionShape2D]) -> CollisionSh
 	quadrants.erase(selected_quadrant)
 	return selected_quadrant
 
-func _pick_kid_costume(costumes : Array[Kid.COSTUME]) -> Kid.COSTUME:
+func _pick_kid_costume(costumes_array : Array[Kid.COSTUME]) -> Kid.COSTUME:
 	randomizer.randomize()
-	var selected_costume = costumes.pick_random()
-	costumes.erase(selected_costume)
+	var selected_costume = costumes_array.pick_random()
+	costumes_array.erase(selected_costume)
 	return selected_costume
 	
 func _ready() -> void:

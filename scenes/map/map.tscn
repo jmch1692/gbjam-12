@@ -88,7 +88,7 @@ metadata/_edit_group_ = true
 [node name="KidSpawner" parent="." node_paths=PackedStringArray("spawn_area_quadrants") instance=ExtResource("3_msupu")]
 position = Vector2(404, 239)
 spawn_area_quadrants = [NodePath("Quadrant_1"), NodePath("Quadrant_2"), NodePath("Quadrant_3"), NodePath("Quadrant_4"), NodePath("Quadrant_5")]
-costumes = Array[int]([0, 1, 2, 3])
+costumes = Array[int]([1, 2, 0, 3])
 metadata/_edit_group_ = true
 
 [editable path="KidSpawner2"]

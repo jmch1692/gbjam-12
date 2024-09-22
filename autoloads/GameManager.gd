@@ -29,10 +29,6 @@ var score : int = 0 :
 		SignalBus.set_new_score.emit(score)
 	get:
 		return score
-		
-func _on_start_game():
-	var map_nstance = map.instantiate()
-	add_sibling(map_nstance)
 
 func _ready():
 	randomizer.randomize()
@@ -46,9 +42,7 @@ func _on_minigame_outcome(won: bool):
 	var closest_area = player.closest_area
 	if player.closest_area:
 		if won:
-			#TODO: Animate kids to run away
 			kids_and_areas.erase(player.closest_area)
-			closest_area.queue_free()
 			player.closest_area = null
 		else:
 			minigame_cooldown = true
@@ -56,6 +50,10 @@ func _on_minigame_outcome(won: bool):
 func get_number_of_kids_in_area(area : Area2D) -> int:
 	var kids = kids_and_areas[area]
 	return kids.size()
+	
+func _on_start_game():
+	var map_nstance = map.instantiate()
+	add_sibling(map_nstance)
 	
 func _on_start_minigame(number_of_kids : int):
 	if minigame_cooldown == false:

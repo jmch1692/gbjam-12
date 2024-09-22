@@ -21,6 +21,10 @@ enum COSTUME {
 
 func _ready() -> void:
 	SignalBus.minigame_outcome.connect(_on_minigame_outcome.bind())
+	SignalBus.scare_away.connect(_on_scare_away.bind())
+
+func _on_scare_away(area: Area2D) -> void:
+	animator.play(costume_worn + "-scared")
 
 func _on_minigame_outcome(won: bool):
 	if !won:
@@ -48,3 +52,9 @@ func _on_animator_animation_finished() -> void:
 	if animation_name.ends_with("-laugh"):
 		animator.play(costume_worn)
 		animator.speed_scale = randf_range(0.6, 1)
+	elif animation_name.ends_with("-scared"):
+		animator.flip_h = [true, false].pick_random()
+		animator.play(costume_worn + "-run")
+	elif animation_name.ends_with("-run"):
+		queue_free()
+		

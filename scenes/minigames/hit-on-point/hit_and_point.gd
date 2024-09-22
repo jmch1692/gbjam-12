@@ -1,7 +1,4 @@
-extends Control
-
-var obtained_score : int = 0
-var number_of_kids : int = 0
+extends Minigame
 
 @export var min_score_baseline : int
 
@@ -9,20 +6,20 @@ var number_of_kids : int = 0
 @onready var animation_player : AnimationPlayer = %AnimationPlayer
 @onready var animated_sprite_target : AnimatedSprite2D = %Target
 @onready var animated_sprite_avatar : AnimatedSprite2D = %PlayerAvatar
+@onready var spookometer : Control = %Spookometer
+
+@onready var background_container : ColorRect = %Background
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SignalBus.increase_minigame_score.connect(_on_increase_score.bind())
 	SignalBus.fail_hit.connect(_on_failed_hit)
-	SignalBus.broadcast_set_difficulty.connect(_on_broadcast_set_difficulty.bind())
 	timer.wait_time = 5 + number_of_kids
+	min_score_baseline += GameManager.difficulty
+	spookometer.min_score_to_win = min_score_baseline
 	timer.start()
 	animated_sprite_target.play("idle")
 	animated_sprite_avatar.play("idle")
-	
-func _on_broadcast_set_difficulty(difficulty: int):
-	min_score_baseline += difficulty
-	print("You need to hit at least " + str(min_score_baseline) + " points to win this minigame")
 	
 func _on_timer_timeout() -> void:
 	GameManager.score = obtained_score
@@ -31,7 +28,6 @@ func _on_timer_timeout() -> void:
 		SignalBus.minigame_outcome.emit(true)
 	else:
 		SignalBus.minigame_outcome.emit(false)
-	SignalBus.minigame_ended.emit()
 	queue_free()
 	
 func _on_failed_hit():
