@@ -254,7 +254,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_m02ub")
 }],
-"loop": true,
+"loop": false,
 "name": &"ghost-run",
 "speed": 5.0
 }, {
@@ -361,7 +361,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2wet6")
 }],
-"loop": true,
+"loop": false,
 "name": &"mummy-run",
 "speed": 5.0
 }, {
@@ -440,8 +440,26 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5jk2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5tfm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jk2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5tfm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jk2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5tfm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jk2c")
 }],
-"loop": true,
+"loop": false,
 "name": &"skelekid-run",
 "speed": 5.0
 }, {
@@ -536,7 +554,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_d256p")
 }],
-"loop": true,
+"loop": false,
 "name": &"witch-run",
 "speed": 5.0
 }, {
@@ -553,7 +571,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rtfui"]
-size = Vector2(25.5, 7)
+size = Vector2(17, 7)
 
 [node name="Kid" type="CharacterBody2D"]
 z_index = 3
@@ -562,12 +580,12 @@ script = ExtResource("1_dy036")
 
 [node name="Animator" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_77tvu")
-animation = &"skelekid-scared"
-frame = 2
+animation = &"witch-run"
+frame = 6
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 19)
+position = Vector2(-1, 19)
 shape = SubResource("RectangleShape2D_rtfui")
 
 [node name="Marker2D" type="Marker2D" parent="."]

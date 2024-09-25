@@ -1,31 +1,31 @@
 [gd_scene load_steps=34 format=3 uid="uid://dyitfsyes3tf1"]
 
-[ext_resource type="Script" path="res://scenes/minigames/hit-on-point/hit_and_point.gd" id="1_cbqai"]
-[ext_resource type="Texture2D" uid="uid://dme3ridhqxj24" path="res://art/minigame_1/minigame-bar.png" id="2_iw632"]
-[ext_resource type="Texture2D" uid="uid://cw84lbx1mipsu" path="res://art/minigame_1/pumpkin-target.png" id="3_quqot"]
-[ext_resource type="Texture2D" uid="uid://bg728tueoylh6" path="res://art/particles/candy-orange.png" id="4_b2bsp"]
-[ext_resource type="Script" path="res://scenes/minigames/hit-on-point/point.gd" id="5_jwv80"]
-[ext_resource type="PackedScene" uid="uid://caayud880f1yk" path="res://scenes/UI/spookometer/spookometer.tscn" id="6_jp7rm"]
-[ext_resource type="Texture2D" uid="uid://b2skrx7f0d1x2" path="res://art/minigame_1/minigame-avatar.png" id="6_pepe0"]
+[ext_resource type="Script" path="res://scenes/minigames/spooky-snap/spooky_snap.gd" id="1_xph2r"]
+[ext_resource type="Texture2D" uid="uid://dme3ridhqxj24" path="res://art/minigame_1/minigame-bar.png" id="2_e3scs"]
+[ext_resource type="Texture2D" uid="uid://cw84lbx1mipsu" path="res://art/minigame_1/pumpkin-target.png" id="3_dbkq6"]
+[ext_resource type="Texture2D" uid="uid://bg728tueoylh6" path="res://art/particles/candy-orange.png" id="4_lrnrq"]
+[ext_resource type="Texture2D" uid="uid://b2skrx7f0d1x2" path="res://art/minigame_1/minigame-avatar.png" id="5_c0leq"]
+[ext_resource type="PackedScene" uid="uid://caayud880f1yk" path="res://scenes/UI/spookometer/spookometer.tscn" id="6_bl4ov"]
+[ext_resource type="Script" path="res://scenes/minigames/spooky-snap/point.gd" id="7_ye2ku"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qs7va"]
-atlas = ExtResource("3_quqot")
+atlas = ExtResource("3_dbkq6")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpoec"]
-atlas = ExtResource("3_quqot")
+atlas = ExtResource("3_dbkq6")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gpvir"]
-atlas = ExtResource("3_quqot")
+atlas = ExtResource("3_dbkq6")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u34q2"]
-atlas = ExtResource("3_quqot")
+atlas = ExtResource("3_dbkq6")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f8q71"]
-atlas = ExtResource("3_quqot")
+atlas = ExtResource("3_dbkq6")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ol4br"]
@@ -85,39 +85,39 @@ turbulence_noise_scale = 8.95
 size = Vector2(3.5, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_voyvw"]
-atlas = ExtResource("6_pepe0")
+atlas = ExtResource("5_c0leq")
 region = Rect2(0, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a68od"]
-atlas = ExtResource("6_pepe0")
+atlas = ExtResource("5_c0leq")
 region = Rect2(32, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_733l2"]
-atlas = ExtResource("6_pepe0")
+atlas = ExtResource("5_c0leq")
 region = Rect2(64, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vxu1s"]
-atlas = ExtResource("6_pepe0")
+atlas = ExtResource("5_c0leq")
 region = Rect2(0, 48, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jnmha"]
-atlas = ExtResource("6_pepe0")
+atlas = ExtResource("5_c0leq")
 region = Rect2(32, 48, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ln4w6"]
-atlas = ExtResource("6_pepe0")
+atlas = ExtResource("5_c0leq")
 region = Rect2(64, 48, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f5xxg"]
-atlas = ExtResource("6_pepe0")
+atlas = ExtResource("5_c0leq")
 region = Rect2(0, 96, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k8ixp"]
-atlas = ExtResource("6_pepe0")
+atlas = ExtResource("5_c0leq")
 region = Rect2(32, 96, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_txwsy"]
-atlas = ExtResource("6_pepe0")
+atlas = ExtResource("5_c0leq")
 region = Rect2(64, 96, 32, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mvnji"]
@@ -232,7 +232,7 @@ _data = {
 point_count = 3
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f22uq"]
-atlas = ExtResource("3_quqot")
+atlas = ExtResource("3_dbkq6")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5oapx"]
@@ -249,7 +249,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jlnvj"]
 size = Vector2(2, 24)
 
-[node name="Hit-and-point" type="Control"]
+[node name="SpookySnap" type="Control" groups=["minigame"]]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -260,7 +260,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("1_cbqai")
+script = ExtResource("1_xph2r")
 min_score_baseline = 15
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -275,15 +275,17 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Bar" type="Sprite2D" parent="CanvasLayer/Background"]
-position = Vector2(78, 23)
-texture = ExtResource("2_iw632")
+position = Vector2(79, 32.2768)
+texture = ExtResource("2_e3scs")
+metadata/_edit_group_ = true
 
 [node name="Target" type="AnimatedSprite2D" parent="CanvasLayer/Background"]
 unique_name_in_owner = true
-position = Vector2(76, 20)
+position = Vector2(77, 29.2768)
 rotation = -0.0174533
 sprite_frames = SubResource("SpriteFrames_ol4br")
 animation = &"fail"
+metadata/_edit_group_ = true
 
 [node name="TargetAreaNormal" type="Area2D" parent="CanvasLayer/Background/Target"]
 position = Vector2(1, -1)
@@ -301,7 +303,7 @@ unique_name_in_owner = true
 emitting = false
 amount = 4
 process_material = SubResource("ParticleProcessMaterial_3o7ct")
-texture = ExtResource("4_b2bsp")
+texture = ExtResource("4_lrnrq")
 lifetime = 0.3
 one_shot = true
 explosiveness = 1.0
@@ -321,7 +323,7 @@ unique_name_in_owner = true
 emitting = false
 amount = 12
 process_material = SubResource("ParticleProcessMaterial_3o7ct")
-texture = ExtResource("4_b2bsp")
+texture = ExtResource("4_lrnrq")
 lifetime = 0.4
 one_shot = true
 explosiveness = 1.0
@@ -330,7 +332,7 @@ interp_to_end = 1.0
 
 [node name="PlayerAvatar" type="AnimatedSprite2D" parent="CanvasLayer/Background"]
 unique_name_in_owner = true
-position = Vector2(38, 90)
+position = Vector2(35, 104)
 sprite_frames = SubResource("SpriteFrames_mvnji")
 animation = &"happy"
 frame = 2
@@ -343,16 +345,16 @@ libraries = {
 "": SubResource("AnimationLibrary_c0at1")
 }
 
-[node name="Spookometer" parent="CanvasLayer/Background" instance=ExtResource("6_jp7rm")]
+[node name="Spookometer" parent="CanvasLayer/Background" instance=ExtResource("6_bl4ov")]
 unique_name_in_owner = true
 layout_mode = 1
-offset_left = 115.0
-offset_top = 50.0
-offset_right = 115.0
-offset_bottom = 50.0
+offset_left = 123.0
+offset_top = 59.0
+offset_right = 123.0
+offset_bottom = 59.0
 
 [node name="Path2D" type="Path2D" parent="CanvasLayer"]
-position = Vector2(80, 72)
+position = Vector2(81, 81.2768)
 curve = SubResource("Curve2D_v350s")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="CanvasLayer/Path2D"]
@@ -362,9 +364,10 @@ rotates = false
 cubic_interp = false
 
 [node name="Point" type="AnimatedSprite2D" parent="CanvasLayer/Path2D/PathFollow2D"]
+unique_name_in_owner = true
 position = Vector2(-1, -2)
 sprite_frames = SubResource("SpriteFrames_5oapx")
-script = ExtResource("5_jwv80")
+script = ExtResource("7_ye2ku")
 
 [node name="PointerArea" type="Area2D" parent="CanvasLayer/Path2D/PathFollow2D/Point"]
 collision_layer = 8

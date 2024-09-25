@@ -6,21 +6,21 @@ extends AnimatedSprite2D
 
 const speed_baseline : int = 20
 
-var pointer_speed : float
+var pointer_speed : float = 0 :
+	set(value):
+		pointer_speed = value * speed_baseline
+		
 var in_perfect_area : bool = false
 var in_ok_area : bool = false
+var started : bool = false
 
-func _ready():
-	if GameManager.difficulty != 0:
-		pointer_speed = speed_baseline * GameManager.difficulty
-	else:
-		pointer_speed = speed_baseline
 		
 func _process(delta: float) -> void:
-	_follow.set_progress(_follow.get_progress() + pointer_speed * delta)
+	if started:
+		_follow.set_progress(_follow.get_progress() + pointer_speed * delta)
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("a"):
+	if event.is_action_pressed("a") && started:
 		if in_ok_area and not in_perfect_area:
 			SignalBus.increase_minigame_score.emit(GameManager.POINT_TYPE.HALF_POINT)
 			normal_particles.emitting = true

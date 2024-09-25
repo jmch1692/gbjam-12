@@ -6,7 +6,7 @@ extends Control
 @onready var transition_bg : ColorRect = %TransitionBackground
 @onready var control_info : Control = $Controls
 @onready var credits_info : Control = $Credits
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	start_button.grab_focus()
 	SignalBus.hide_info_panel.connect(_on_hide_info_panel)

@@ -19,8 +19,8 @@ func on_input(event: InputEvent) -> void:
 	if direction != Vector2.ZERO:
 		state_machine.change_state("Move")
 
-	if event.is_action_pressed("a") && owner.closest_area != null:
-		SignalBus.start_minigame.emit(GameManager.get_number_of_kids_in_area(owner.closest_area))
+	if event.is_action_pressed("a") && owner.closest_area != null && !GameManager.minigame_cooldown:
+		SignalBus.setup_minigame.emit()
 		state_machine.change_state("Inactive")
 		
 ## Called when the state machine exits this state.

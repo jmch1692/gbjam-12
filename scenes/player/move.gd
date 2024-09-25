@@ -23,21 +23,6 @@ func on_process(delta: float) -> void:
 		
 	owner.velocity = direction * speed
 	owner.move_and_slide()
-	owner.closest_area = _check_closest_kid_area()
-
-func _check_closest_kid_area() -> Area2D:
-	var areas : Array = GameManager.kids_and_areas.keys()
-	
-	if areas.is_empty():
-		return null
-	
-	for area in areas:
-		if area.position.distance_squared_to(owner.position) <= spook_distance:
-			GameManager.make_random_kid_talk(area)
-			return area
-		else:
-			continue
-	return null
 	
 # Called every physics frame when this state is active.
 #func on_physics_process(delta: float) -> void:

@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://c78kjgp3n555s" path="res://theme/gb-theme.tres" id="1_fi185"]
 [ext_resource type="Script" path="res://scenes/UI/menus/main_menu.gd" id="2_3fqh5"]
-[ext_resource type="PackedScene" uid="uid://d3lqywc6pyxe3" path="res://scenes/UI/credits-and-instructions/info.tscn" id="3_jghf0"]
+[ext_resource type="PackedScene" uid="uid://d3lqywc6pyxe3" path="res://scenes/UI/credits-and-how-to-play/info.tscn" id="3_jghf0"]
 
 [sub_resource type="Animation" id="Animation_kix4x"]
 length = 0.001
@@ -160,7 +160,7 @@ title = "Credits"
 [node name="Controls" parent="." instance=ExtResource("3_jghf0")]
 visible = false
 layout_mode = 1
-text = "- Press 'A' to spook kids
+text = "- Press 'A' to spook kids when near them
 - Play minigames to earn candy
 - Move around the neighborhood with the arrow keys
 - Spook all kids to win"

@@ -162,19 +162,19 @@ _data = {
 "transform": SubResource("Animation_h8bvl")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["main"]]
 z_index = 2
-collision_mask = 38
+collision_mask = 54
 script = ExtResource("1_gg0v4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_g51r0")
+debug_color = Color(0.678436, 0.352508, 0.909006, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_vi42o")
 hframes = 8
 vframes = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 7)
-shape = SubResource("CapsuleShape2D_g51r0")
 
 [node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("current_state", "animation_player")]
 script = ExtResource("2_qnx6e")
@@ -202,7 +202,7 @@ blend_times = [&"MoveRight", &"MoveLeft", 1.0, &"MoveRight", &"MoveRight", 1.0]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
-limit_top = -108
+limit_top = -200
 limit_right = 672
 limit_bottom = 320
 limit_smoothed = true

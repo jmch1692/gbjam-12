@@ -1,4 +1,4 @@
-# Unnamed project
+# Boo-who?
 
 Little game project for GBJAM 12
 

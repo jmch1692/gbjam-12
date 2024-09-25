@@ -2,37 +2,35 @@
 
 [ext_resource type="Script" path="res://scenes/kid/kid_spawner.gd" id="1_2noj8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u23ss"]
-size = Vector2(40, 40)
+[sub_resource type="CircleShape2D" id="CircleShape2D_rvpby"]
+radius = 80.5047
 
-[node name="KidSpawner" type="Area2D"]
+[node name="KidSpawner" type="Area2D" node_paths=PackedStringArray("spawn_area_points")]
+position = Vector2(81, 69)
 collision_layer = 16
-collision_mask = 0
-monitoring = false
 monitorable = false
 script = ExtResource("1_2noj8")
+spawn_area_points = [NodePath("SpawnArea_1"), NodePath("SpawnArea_2"), NodePath("SpawnArea_3"), NodePath("SpawnArea_4"), NodePath("SpawnArea_5")]
+metadata/_edit_group_ = true
 
-[node name="Quadrant_1" type="CollisionShape2D" parent="."]
-position = Vector2(-37, -35)
-shape = SubResource("RectangleShape2D_u23ss")
-debug_color = Color(0.607801, 0.526655, 0.340411, 0.42)
+[node name="ScareArea" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rvpby")
+debug_color = Color(0.775782, 0.365069, 0.641951, 0.42)
 
-[node name="Quadrant_2" type="CollisionShape2D" parent="."]
-position = Vector2(40, -34)
-shape = SubResource("RectangleShape2D_u23ss")
-debug_color = Color(0.607801, 0.526655, 0.340411, 0.42)
+[node name="SpawnArea_5" type="Marker2D" parent="."]
+position = Vector2(39, 43)
 
-[node name="Quadrant_3" type="CollisionShape2D" parent="."]
-position = Vector2(-35, 35)
-shape = SubResource("RectangleShape2D_u23ss")
-debug_color = Color(0.607801, 0.526655, 0.340411, 0.42)
+[node name="SpawnArea_4" type="Marker2D" parent="."]
+position = Vector2(-33, 43)
 
-[node name="Quadrant_4" type="CollisionShape2D" parent="."]
-position = Vector2(36, 35)
-shape = SubResource("RectangleShape2D_u23ss")
-debug_color = Color(0.607801, 0.526655, 0.340411, 0.42)
+[node name="SpawnArea_3" type="Marker2D" parent="."]
+position = Vector2(0, 2)
 
-[node name="Quadrant_5" type="CollisionShape2D" parent="."]
-position = Vector2(1, -1)
-shape = SubResource("RectangleShape2D_u23ss")
-debug_color = Color(0.607801, 0.526655, 0.340411, 0.42)
+[node name="SpawnArea_2" type="Marker2D" parent="."]
+position = Vector2(39, -37)
+
+[node name="SpawnArea_1" type="Marker2D" parent="."]
+position = Vector2(-34, -37)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

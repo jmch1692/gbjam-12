@@ -72,4 +72,4 @@ Label/font_sizes/font_size = 16
 Label/fonts/font = ExtResource("1_i7yaf")
 Label/styles/normal = SubResource("StyleBoxEmpty_dqofa")
 RichTextLabel/colors/default_color = Color(0.0823529, 0.0862745, 0.25098, 1)
-RichTextLabel/fonts/normal_font = null
+RichTextLabel/fonts/normal_font = ExtResource("1_i7yaf")

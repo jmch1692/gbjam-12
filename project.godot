@@ -13,6 +13,7 @@ config_version=5
 config/name="gbjam-12"
 run/main_scene="res://scenes/UI/menus/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/bg_color=Color(1, 1, 1, 1)
 config/icon="res://icon.svg"
 
 [autoload]
@@ -25,11 +26,18 @@ GameManager="*res://autoloads/GameManager.gd"
 window/size/viewport_width=160
 window/size/viewport_height=144
 window/size/resizable=false
+window/size/window_width_override=980
+window/size/window_height_override=760
 window/stretch/mode="viewport"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/finite_state_machine/plugin.cfg")
+
+[global_group]
+
+main="Main characters and npcs"
+minigame="Scenes that are created on minigame prompting"
 
 [input]
 
