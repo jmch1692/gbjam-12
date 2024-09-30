@@ -4,7 +4,7 @@ extends AnimatedSprite2D
 @onready var normal_particles : GPUParticles2D = %NormalParticles
 @onready var perfect_particles : GPUParticles2D = %PerfectParticles
 
-const speed_baseline : int = 20
+const speed_baseline : int = 18
 
 var pointer_speed : float = 0 :
 	set(value):

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd35f42tr5bt"]
+
+[ext_resource type="Texture2D" uid="uid://crund7ebae4pb" path="res://art/minigame_candy_sweeper/grid-border.png" id="1_2r2wp"]
+[ext_resource type="Script" path="res://scenes/minigames/candy-sweeper/sweeper_box.gd" id="2_i6t1t"]
+[ext_resource type="Texture2D" uid="uid://nhua84faccuv" path="res://art/particles/candy-particle.png" id="2_jw7ud"]
+
+[node name="Box" type="TextureRect"]
+offset_right = 16.0
+offset_bottom = 16.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("1_2r2wp")
+script = ExtResource("2_i6t1t")
+metadata/_edit_use_anchors_ = true
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 1
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("2_jw7ud")

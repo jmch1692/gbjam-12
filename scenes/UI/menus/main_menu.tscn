@@ -81,7 +81,7 @@ grow_horizontal = 2
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 32
 text = "Boo Who?"
 
 [node name="ButtonsContainer" type="VBoxContainer" parent="ColorRect/VBoxContainer"]

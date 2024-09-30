@@ -266,13 +266,12 @@ min_score_baseline = 15
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Background" type="ColorRect" parent="CanvasLayer"]
-unique_name_in_owner = true
-self_modulate = Color(0.0823529, 0.0862745, 0.25098, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.188235, 0, 0.188235, 1)
 
 [node name="Bar" type="Sprite2D" parent="CanvasLayer/Background"]
 position = Vector2(79, 32.2768)
@@ -339,8 +338,9 @@ frame = 2
 frame_progress = 1.0
 speed_scale = 0.75
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Background"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Background/PlayerAvatar"]
 unique_name_in_owner = true
+root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_c0at1")
 }

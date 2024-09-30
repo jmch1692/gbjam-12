@@ -40,7 +40,8 @@ var score : int = 0 :
 		return score
 		
 var minigames : Array[PackedScene] = [
-	preload("res://scenes/minigames/spooky-snap/spooky_snap.tscn")
+	preload("res://scenes/minigames/spooky-snap/spooky_snap.tscn"),
+	preload("res://scenes/minigames/candy-sweeper/candy_sweeper.tscn")
 ]
 	
 func _ready():
@@ -89,7 +90,6 @@ func _on_setup_minigame() -> void:
 	root_node.add_child(minigame_counter_scene)
 	root_node.add_child(minigame_instructions_instantiated)
 
-	
 func _on_start_game():
 	var map_nstance = map.instantiate()
 	add_sibling(map_nstance)

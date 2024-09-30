@@ -38,6 +38,7 @@ enabled=PackedStringArray("res://addons/finite_state_machine/plugin.cfg")
 
 main="Main characters and npcs"
 minigame="Scenes that are created on minigame prompting"
+spawner=""
 
 [input]
 

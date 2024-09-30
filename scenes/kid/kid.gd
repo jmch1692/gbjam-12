@@ -71,4 +71,3 @@ func _on_animator_animation_finished() -> void:
 	elif animation_name.ends_with("-run"):
 		SignalBus.remove_kid.emit(self)
 		queue_free()
-		

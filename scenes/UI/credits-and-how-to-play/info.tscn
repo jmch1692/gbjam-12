@@ -61,8 +61,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -36.0
+offset_top = 4.0
 offset_right = 36.0
-offset_bottom = 13.0
+offset_bottom = 17.0
 grow_horizontal = 2
 theme = ExtResource("1_8f8iq")
 

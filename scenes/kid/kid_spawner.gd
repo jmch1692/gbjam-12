@@ -1,4 +1,5 @@
 extends Area2D
+class_name KidSpawner
 
 @export var spawn_area_points : Array[Marker2D]
 

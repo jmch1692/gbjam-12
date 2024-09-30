@@ -203,6 +203,6 @@ blend_times = [&"MoveRight", &"MoveLeft", 1.0, &"MoveRight", &"MoveRight", 1.0]
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
 limit_top = -200
-limit_right = 672
-limit_bottom = 320
+limit_right = 880
+limit_bottom = 560
 limit_smoothed = true
