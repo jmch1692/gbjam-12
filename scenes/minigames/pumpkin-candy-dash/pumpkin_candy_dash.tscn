@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb620e1rv2t7b"]
+
+[ext_resource type="Script" path="res://scenes/minigames/pumpkin-candy-dash/pumpkin_candy_dash.gd" id="1_evqpl"]
+[ext_resource type="PackedScene" uid="uid://caayud880f1yk" path="res://scenes/UI/spookometer/spookometer.tscn" id="2_xuisp"]
+
+[node name="PumpkinCandyDash" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_evqpl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.188235, 0, 0.188235, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ColorRect"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 45.0
+offset_right = 68.0
+offset_bottom = 85.0
+
+[node name="Spookometer" parent="CanvasLayer/ColorRect/HBoxContainer" instance=ExtResource("2_xuisp")]
+layout_mode = 2
+
+[node name="Timer" type="Timer" parent="."]

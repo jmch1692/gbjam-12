@@ -100,6 +100,7 @@ size_flags_vertical = 5
 focus_neighbor_top = NodePath("../Quit")
 focus_neighbor_bottom = NodePath("../Controls")
 theme = ExtResource("1_fi185")
+button_mask = 0
 text = "Start"
 
 [node name="Controls" type="Button" parent="ColorRect/VBoxContainer/ButtonsContainer"]
@@ -108,6 +109,7 @@ size_flags_horizontal = 5
 size_flags_vertical = 5
 focus_neighbor_top = NodePath("../StartButton")
 focus_neighbor_bottom = NodePath("../Credits")
+button_mask = 0
 text = "How to play"
 
 [node name="Credits" type="Button" parent="ColorRect/VBoxContainer/ButtonsContainer"]
@@ -116,6 +118,7 @@ size_flags_horizontal = 5
 size_flags_vertical = 5
 focus_neighbor_top = NodePath("../Controls")
 focus_neighbor_bottom = NodePath("../Quit")
+button_mask = 0
 text = "Credits"
 
 [node name="Quit" type="Button" parent="ColorRect/VBoxContainer/ButtonsContainer"]

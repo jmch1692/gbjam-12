@@ -16,7 +16,10 @@ var possible_dialogues : Array[String] = [
 	"Wanna trade some candies?",
 	"Hurry up! There's so many houses left to visit!",
 	"This is the lamest halloween",
-	"Need...more....candy"
+	"Need...more....candy",
+	"Nothing can scare us if we stick together",
+	"Not scary, try again later!",
+	"Let's stick together, otherwise, we'll be easier to scare"
 ]
 
 func _ready() -> void:

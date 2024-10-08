@@ -54,7 +54,7 @@ func _ready() -> void:
 			
 	SignalBus.set_title_and_instructions.emit(game_name, instructions)
 		
-func calculate_allowed_bad_hits(number_of_kids: int, bad_choices: int) -> int:
+func calculate_allowed_bad_hits(bad_choices: int) -> int:
 	
 	var max_hits = max(1, floor(bad_choices/log(number_of_kids + difficulty_scaling_speed)))
 	
@@ -103,7 +103,7 @@ func _on_minigame_countdown_timeout() -> void:
 	number_of_kids = GameManager.kids_and_areas[closest_area].size()
 	min_score_baseline = GameManager.scoring_map[GameManager.POINT_TYPE.FULL_POINT] * number_of_kids
 	spookometer.min_score_to_win = min_score_baseline
-	allowed_bad_hits = calculate_allowed_bad_hits(number_of_kids, boxes_containing_pumpkins)
+	allowed_bad_hits = calculate_allowed_bad_hits(boxes_containing_pumpkins)
 	started = true
 	chance = max((number_of_kids / 16), 1)
 	
